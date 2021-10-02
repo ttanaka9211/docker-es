@@ -14,6 +14,7 @@ services:
     networks: [elastic]
     environment:
       - discovery.type=single-node
+    restart: always 
   kibana:
     image: docker.elastic.co/kibana/kibana:7.12.1 
     ports:
@@ -22,5 +23,6 @@ services:
       #- "ELASTICSEARCH_URL=http://elasticsearch:9200"
       - "I18N_LOCALE=ja-JP"
     networks: [elastic]
+    restart: always
 networks:
   elastic:
