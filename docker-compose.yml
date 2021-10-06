@@ -23,6 +23,7 @@ services:
       #- "ELASTICSEARCH_URL=http://elasticsearch:9200"
       - "I18N_LOCALE=ja-JP"
     networks: [elastic]
-    restart: always
+    profiles:
+      - extra
 networks:
   elastic:
